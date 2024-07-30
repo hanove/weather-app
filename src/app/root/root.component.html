@@ -1,0 +1,29 @@
+<!-- <div style="width: 1px; height: 1px;"></div> -->
+<div class="outer-container">
+    <div class="inner-container">
+        <div class="content-container">
+            <div class="input-container">
+                <input type="text" [(ngModel)]="city">
+                <button (click)="getWeather()" [ngClass]="cardBackgroundClass">Get Weather</button>
+            </div>
+            <div class="weather-card" [ngClass]="cardBackgroundClass">
+                <div class="weather-card-header">
+                    <p>{{city}}</p>
+                </div>
+                <div class="weather-card-content-container">
+                    <div class="weather-card-image">
+                        <img src="{{image}}">
+                    </div>
+                    <div class="weather-card-content">
+                        <div class="weather-card-temperature">
+                            <h1>{{temperature}}°C</h1>
+                        </div>
+                        <div class="weather-card-description">
+                            <h1>{{weatherDescription}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
